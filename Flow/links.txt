@@ -1,0 +1,60 @@
+Customer Creation call
+
+1) https://localhost:44339/api/Orders/CreateCustomer
+2) In authenticaton give no auth
+3) In Body  select raw and select json format
+{
+    "Name":"Sreekanth",
+    "Email":"Sree123457812@gmil.com",
+    "Password":"Sreekanth123",
+    "Address":"Hyderabad",
+    "MobileNo":"12345623491"
+}
+4) validations 
+Name,password,Email are mandatory
+Name should be min 4 char and max 60 char,
+email format mandatory,
+mobile numbber min 10 to max 12 digits
+5) In headers section key Content-Type and value application/json
+
+----------------------------------------------------
+Create the orders
+
+
+1) https://localhost:44339/api/Orders/CreateOrders
+2) In authenticaton give no auth
+3) In Body  select raw and select json format
+{
+    "DeliveryAddress":"Hyderabad",
+    "UserId":2,
+    "itemsLists":[
+        {
+        "ItemName":"TV",
+        "Price":15000
+    },
+    {
+        "ItemName":"Refrzrator",
+        "Price":10000
+    },
+    {
+        "ItemName":"Mobile",
+        "Price":1500
+    }
+    ]
+4) validations 
+DeliveryAddress,Userid mandatory.In Itemslists Itemname,Price mandatory
+5) In headers section key Content-Type and value application/json
+
+-----------------------------------------------------------------------
+
+Get the orders
+
+1) https://localhost:44339/api/Orders/GetOrdersItemsList?OrderId=1002
+
+2) In authenticaton give no auth
+
+
+
+	
+
+ 
